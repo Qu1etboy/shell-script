@@ -1,9 +1,9 @@
-search_dir=./files
+search_dir=$1
 i=1
-zone='B'
+zone='A'
 for entry in "$search_dir"/*
 do
-  mv "$entry" "./files/${zone}${i}.txt"
+  mv "$entry" "${search_dir}/${zone}${i}.txt"
   i=$((i+1))
   # echo "$entry"
 done
